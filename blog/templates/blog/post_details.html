@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {{ post.author }}
+    <p></p>
+    {{ post.created_date }}
+    <p></p>
+    {{ post.text }}
+{% endblock content %}
