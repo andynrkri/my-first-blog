@@ -6,4 +6,9 @@
     {{ post.created_date }}
     <p></p>
     {{ post.text }}
+    {% if user.is_authenticated %}
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span
+                class="glyphicon glyphicon-pencil"></span></a>
+    {% endif %}
+    {{ post.title }}
 {% endblock content %}
